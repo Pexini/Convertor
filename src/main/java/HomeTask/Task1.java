@@ -7,19 +7,24 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please write your age : ");
         int age = scanner.nextInt();
-        int result = 0;
+
         if (age < 0) {
             System.out.println("Your not born yet");
-        } else {
-            if (age % 10 == 1) {
-                System.out.println(" Your " + age + " год");
-            } else {
-                if (age % 10 == 2 || age % 10 == 3 || age % 10 == 4) {
-                    System.out.println(" Your " + age + " года");
-                } else {
-                    System.out.println(" Your " + age + " лет");
-                }
-            }
+        }
+        if (age % 100 >= 11 && age % 100 <= 19) {
+            System.out.println(" Your " + age + " лет");
+            return;
+        }
+        if (age % 10 == 1) {
+            System.out.println(" Your " + age + " год");
+        }
+        if (age % 10 >= 2 && age % 10 <= 4) {
+            System.out.println(" Your " + age + " года");
+        }
+        if (age % 10 == 0 || age % 10 >= 5 && age % 10 <= 9) {
+            System.out.println(" Your " + age + " лет");
         }
     }
 }
+
+

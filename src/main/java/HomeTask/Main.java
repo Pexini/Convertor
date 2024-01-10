@@ -12,13 +12,14 @@ public class Main {
         double result = 0;
         if (measure.equals("F")) {
             result = (number - 32) / 1.8;
+            System.out.println("Result in F " + result);
         } else {
             if (measure.equals("C")) {
                 result = number + 273;
+                System.out.println("Result in C " + result);
             }else {
                 System.out.println( "Error unit of measurement");
             }
         }
-        System.out.println("Result " + result);
-    }
+        }
 }
